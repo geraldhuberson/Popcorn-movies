@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <icon></icon>
+    <link rel="stylesheet" href="css/contact.css">
+    <!--CDN BOOTSTRAP-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" 
+    rel="stylesheet" 
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" 
+    crossorigin="anonymous">
+    <!--ICONOS-->
+    <link href="https://kit-pro.fontawesome.com/releases/v5.15.4/css/pro.min.css" rel="stylesheet">
+ 
+</head>
+
+<body>
+  
+    <main class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="well well-sm">
+                    <form id="formulario" class="form-horizontal" action="">
+                        <fieldset>
+                            <legend class="text-center header"><h1>Contáctenos</h1></legend>
+                            <div id="form-group-apellido" class="form-group">
+                                <span class="col-md-1 col-md-offset-2 text-center"><i class="fas fa-user bigicon"></i></span>
+                                <div id="grupo_apellido" class="input-group p-2 col-md-12">
+                                    <input type="text" name="apellido" placeholder="apellido" id="apellido"  
+                                    title="Letras entre 3 y 30 caracteres." class="form-control" require>
+                                    <i class="formulario_validacion-estado fas fa-times-circle"></i>
+                                </div>
+                                <p class="formulario_input-error">El Apellido tiene que ser de 3 a 40 letras.</p>
+                            </div>
+                            <div id="form-group-nombres" class="form-group">
+                                <span class="col-md-1 col-md-offset-2 text-center"><i class="fas fa-user bigicon"></i></span>
+                                <div id="grupo_nombres" class="input-group p-2 col-md-12">
+                                    <input type="text" name="nombres" placeholder="nombres" id="nombres" 
+                                    title="Letras entre 2 y 40 caracteres." class="form-control" require>
+                                    <i class="formulario_validacion-estado fas fa-times-circle"></i>
+                                </div>
+                                <p class="formulario_input-error">El/los Nombre/s tienen que ser de 2 a 40 letras.</p>
+                            </div> 
+                            <div id="form-group-email" class="form-group">
+                                <span class="col-md-1 col-md-offset-2 text-center"><i class="fas fa-envelope bigicon"></i></span>
+                                <div id="grupo_email" class="input-group p-2 col-md-12">
+                                    <input type="email" name="email" placeholder="E-mail" id="email" 
+                                    title="Letras, números, y caracteres opcionales (_,-,%,+). Más de 5 caracteres." class="form-control" require>
+                                    <i class="formulario_validacion-estado fas fa-times-circle"></i>
+                                </div>
+                                <p class="formulario_input-error">El email debe tener el formato usuario@dominio.ext</p>
+                            </div>
+                            <div id="form-group-telefono" class="form-group">
+                                <span class="col-md-1 col-md-offset-2 text-center"><i class="fas fa-phone-square bigicon"></i></span>
+                                <div id="grupo_telefono" class="input-group p-2 col-md-12">
+                                    <input type="number" name="telefono" placeholder="teléfono" id="telefono"  
+                                    title="Sólo números. Entre 7 y 14 caracteres." require="" class="form-control" require>
+                                    <i class="formulario_validacion-estado fas fa-times-circle"></i>
+                                </div>
+                                <p class="formulario_input-error">El télefono debe tener 7 a 14 números.</p>
+                            </div> 
+                            <div id="form-group-message" class="form-group">
+                                <span class="col-md-1 col-md-offset-2 text-center"><i class="fas fa-comment-alt bigicon"></i></span>
+                                <div id="grupo_message" class="input-group p-2 col-md-12">
+                                    <textarea class="form-control" id="message" name="message" placeholder="Escriba aquí su comentario." rows="5" style="resize: none;" require ></textarea>
+                                    <!-- <i class="formulario_validacion-estado fas fa-times-circle"></i> -->
+                                </div>
+                                <p class="formulario_input-error">Ingrese un comentario.</p>
+                            </div>    
+
+                            <div class="formulario_mensaje" id="formulario_mensaje">
+                                <p><i class="fas fa-exclamation-triangle"></i> <b>Error:</b> Por favor rellena el formulario correctamente. </p>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-md-12 text-center">
+                                    <button type="submit" class="btn btn-secondary btn-lg p-2 mt-2">Enviar</button>
+                                    <a href="index.html" type="button" class="btn btn-secondary btn-lg p-2 mt-2">Volver</a>
+                                    <p class="formulario_mensaje-exito" id="formulario_mensaje-exito">Formulario enviado exitosamente!</p>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </form>   
+                    
+                </div>   
+            </div>       
+        </div>
+    
+    </main>  
+    <script src="js/contacto.js"></script>
+    <!--CDN BOOTSTRAP-->
+    <script 
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" 
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" 
+        crossorigin="anonymous">
+    </script>
+
+</body>
+
+</html>

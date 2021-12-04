@@ -1,0 +1,129 @@
+body {
+    background: linear-gradient(#220d8e 25%, #3e20d6 25%, #674afa 50%);
+}
+
+.carousel-caption {
+    margin-bottom: 15em;
+}
+.carousel-item {
+    width: 100%;
+    position: relative;
+}
+
+.carousel-item::before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: linear-gradient(0deg, rgba(103,74,250,1) 0%, rgba(255,255,255,0) 12%, rgba(255,255,255,0) 69%, rgba(0,0,0,0.8) 100%);
+}
+
+.sinopsispp {
+    padding-bottom: 1em; 
+    text-shadow: 4px 4px 6px rgb(0 0 0 / 80%);
+}
+
+/* Categories Control*/
+
+.contenedor-titulo-controles{
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+}
+
+.contenedor-titulo-controles h3{
+    color: #fff;
+    font-size: 30px;
+}
+
+.contenedor-titulo-controles .indicadores button {
+    background: #fff;
+    height: 3px;
+    width: 10px;
+    cursor: pointer;
+    border: none;
+    margin-right: 2px;
+}
+
+.contenedor-titulo-controles .indicadores button:hover,
+.contenedor-titulo-controles .indicadores button.active {
+    background: blue;
+
+}
+
+/* Categorias */
+
+.contenedor {
+    margin: auto;
+    width: 90%;
+}
+
+.peliculas-recomendadas {
+    margin-bottom: 70px;
+}
+
+.peliculas-recomendadas .contenedor-principal {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.peliculas-recomendadas .contenedor-principal .flecha-izq,
+.peliculas-recomendadas .contenedor-principal .flecha-der {
+    position: absolute;
+    border: none;
+    background: rgba(0, 0, 0, 0.3);
+    font-size: 40px;
+    height: 50%;
+    top: calc(50% - 25%);
+    line-height: 40px;
+    width: 50px;
+    color: #fff;
+    cursor: pointer;
+    z-index: 500;
+    transition: .2s ease all;
+}
+
+.peliculas-recomendadas .contenedor-principal .flecha-izq:hover,
+.peliculas-recomendadas .contenedor-principal .flecha-der:hover {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.peliculas-recomendadas .contenedor-principal .flecha-izq{
+    left: 0;
+}
+
+.peliculas-recomendadas .contenedor-principal .flecha-der{
+    right: 0;
+}
+
+/* Films */
+
+.peliculas-recomendadas .contenedor-carousel {
+    width: 100%;
+    padding: 20px 0;
+    overflow: hidden;
+    scroll-behavior: smooth;
+}
+
+.peliculas-recomendadas .contenedor-carousel .carouselpp2 {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.peliculas-recomendadas .contenedor-carousel .carouselpp2 .films {
+    min-width: 20%;
+    transition: .3s ease all;
+    box-shadow: 5px 5px 10px rgba(0,0,0, .3);
+}
+
+.peliculas-recomendadas .contenedor-carousel .carouselpp2 .films.hover {
+    transform: scale(1.2);
+    transform-origin: center;
+}
+
+.peliculas-recomendadas .contenedor-carousel .carouselpp2 .films img {
+    width: 100%;
+    vertical-align: top;
+}
+  

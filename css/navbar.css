@@ -1,0 +1,15 @@
+.navbar{
+  background-color: black;
+  opacity: 0.9;
+}
+.collapse{
+  align-items: center;
+  margin-left: 25%;
+}
+.navbar-toggler-icon{
+  background-color: white;
+  border-radius: 20%;
+}
+.carousel-item{
+  height: 50vh;
+}
