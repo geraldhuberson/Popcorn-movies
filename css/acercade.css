@@ -7,7 +7,7 @@
 body{
     background-position: center;
     background-repeat: no-repeat;
-    background-size: 330vh; 
+    background-size: 330vh;
     width: 100vw;
     height: 100vh;
     background-image:
@@ -15,8 +15,12 @@ body{
         circle at bottom center,
         #1698F4,
         #0941D8 30%
-      );
-  
+      );  
+}
+
+h3{
+    font-size: 20px;
+    font-family: system-ui,-apple-system,system-ui,"Segoe UI",Roboto,Ubuntu,"Helvetica Neue",sans-serif;
 }
 
 h2{
@@ -28,13 +32,28 @@ h2{
     text-shadow: 0px 0px 6px black;
 }
 
+.acerca_de{
+    width: 100vw;
+  }
+
+.acerca_de p{
+    font-size: clamp(1rem,1vw,1.8rem);
+    font-family: system-ui,-apple-system,system-ui,"Segoe UI",Roboto,Ubuntu,"Helvetica Neue",sans-serif;
+    text-align: justify;
+    text-justify: center;
+    padding: 5px;
+    margin: 0;
+    width:fit-content;
+    height: fit-content;
+    overflow: hidden;
+  }
+
 .content-all{
     width: 210px; 
     margin: auto;
     perspective: 800px;
     position: relative;
     margin-top: 25px;
-
 }
 
 .content-carrousel{
@@ -47,7 +66,6 @@ h2{
 .content-carrousel:hover{
     animation-play-state: paused;
     cursor: pointer;
-
 }
 
 .content-carrousel figure{
@@ -58,8 +76,7 @@ h2{
     position: absolute;
     box-shadow: 0px 0px 20px 0px black;
     -webkit-box-shadow: 5px 5px 15px 5px #000000; 
-    transition: all 300ms;
-    
+    transition: all 300ms;    
 }
 
 .content-carrousel figure:hover{
@@ -180,7 +197,30 @@ h2{
     }
 }
 
-@media screen and (max-width: 767px){
+@media screen and (max-width: 1020px){   
+    .content-all{
+        width: 50vw; 
+    }
+    
+    .content-carrousel{
+        width: 100vw;
+    }
+    .image__overlay {
+        width: 30%;
+        height: 30%;
+    }
+
+    .content-carrousel figure{
+        width: 10vw;   
+        height: 10vh;          
+    }
+
+   .button-popcorn {
+        padding: 4px 8px;
+      }
+}
+
+@media screen and (max-width: 767px){   
     .content-all{
         height:300px;
     }   
@@ -194,9 +234,26 @@ h2{
       }
 }
 
-@media screen and (max-width: 411px) {
+@media screen and (max-width: 360px) {
+   body{
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 130vh;
+        width: 100vw;
+        height: 720px; 
+    }
+    
+    p {
+        width: 340px;
+        font-size: clamp(1rem,1vw,1.8rem);
+    }
+
+    h2{
+        text-align: center;
+        font-size: 20px;
+    }    
     .content-all{
-        height:300px;
+        height: 300px;     
     }   
     .content-carrousel figure{
         width: 25vh;   
@@ -211,4 +268,9 @@ h2{
         font-size: 0.45em;
         margin-top: 0.25em;
     }
+    .button-popcorn {
+        padding: 16px 21px;
+      }
   }
+
+  
