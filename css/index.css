@@ -1,5 +1,18 @@
-body {
+/* body {
     background: linear-gradient(#220d8e 25%, #3e20d6 25%, #674afa 50%);
+} */
+body{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 330vh;
+    width: 100vw;
+    height: 100vh;
+    background-image:
+      radial-gradient(
+        circle at bottom center,
+        #1698F4,
+        #0941D8 30%
+      );  
 }
 
 .carousel-caption {
