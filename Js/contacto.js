@@ -7,33 +7,33 @@ const expresiones = {
     nombres: /^[a-zA-ZÀ-ÿ\s]{2,40}$/,  //Letras y espacios, inclusive acentos
     password: /^.{4,12}$/, //4 a 12 dígitos
     correo: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/, 
-    telefono: /^\d{7,14}$/ //7 a 14 números
+    telefono: /^\d{7,14}$/, //7 a 14 números
 }
 
 const campos = {
 	apellido: false,
 	nombres: false,
 	email: false,
-	telefono: false
+	telefono: false,
+	message: false
 }
 
 const validarFormulario = (e) => {
 	let input_name = e.target.name; //verifico qué input quiero validar
-
+	
 	switch (input_name) {  
 		case "apellido":
 			validarCampo(expresiones.apellido, e.target, input_name);
+			if(campos.apellido){			
+				document.getElementById('apellido').value=FirstLetterWords(e.target.value);				
+			}
 		break;
 		case "nombres":
 			validarCampo(expresiones.nombres, e.target, input_name);
+			if(campos.nombres){			
+				document.getElementById('nombres').value=FirstLetterWords(e.target.value);				
+			}
 		break;
-		// case "password":
-		// 	validarCampo(expresiones.password, e.target, 'password');
-		// 	validarPassword2();
-		// break;
-		// case "password2":
-		// 	validarPassword2();
-		// break;
 		case "email":
 			validarCampo(expresiones.correo, e.target, input_name);
 		break;
@@ -41,7 +41,22 @@ const validarFormulario = (e) => {
 			validarCampo(expresiones.telefono, e.target, input_name);
 		break;
         case "message": 
-			alert('');
+			
+			// let comment = document.getElementById("message")[0].value;
+			// if(comment != ""){
+			// 	campos.message=true;
+			// }
+
+			// console.log(campos.message);
+			// if(document.getElementById('message').value !=''){
+			// 	campos.message=true;	
+			// }
+			
+			// console.log(e.target.value);
+			// if(e.target.value.length!=''){
+			// 	campos.message=true;	
+				
+			// }			
         break;
 	}
 };
@@ -65,6 +80,18 @@ const validarCampo = (expresion, input, campo) => {
 }
 
 /*
+en Switch
+
+		case "password":
+			validarCampo(expresiones.password, e.target, 'password');
+			validarPassword2();
+		break;
+		case "password2":
+			validarPassword2();
+		break;
+
+///------------------------
+
 const validarPassword2 = () => {
 	const inputPassword1 = document.getElementById('password');
 	const inputPassword2 = document.getElementById('password2');
@@ -88,6 +115,28 @@ const validarPassword2 = () => {
 
 */
 
+//valido textarea
+function validar()
+{
+if (document.getElementById('message').value.length==0 ) {
+return false;
+}
+else return true;
+}
+
+
+//Primera letra de cada palabra a mayúsculas
+function FirstLetterWords(str)
+{
+    var partes = str.split(" ");
+    for ( var i = 0; i < partes.length; i++ )
+    {
+        var j = partes[i].charAt(0).toUpperCase();
+        partes[i] = j + partes[i].substr(1);
+    }
+    return partes.join(" ");
+}
+
 inputs.forEach((input) => {
 	input.addEventListener('keyup', validarFormulario); //evento al presionar tecla
 	input.addEventListener('blur', validarFormulario); //evento al perder el input el foco
@@ -95,7 +144,7 @@ inputs.forEach((input) => {
 
 formulario.addEventListener('submit', (e) => {
 	e.preventDefault();
-	if(campos.apellido && campos.nombres && campos.email && campos.telefono){
+	if(campos.apellido && campos.nombres && campos.email && campos.telefono && validar()){
 		formulario.reset();
 
 		document.getElementById('formulario_mensaje-exito').classList.add('formulario_mensaje-exito-activo');
@@ -108,6 +157,9 @@ formulario.addEventListener('submit', (e) => {
 		});
 	} else {
 		document.getElementById('formulario_mensaje').classList.add('formulario_mensaje-activo');
+		setTimeout(() => {
+			document.getElementById('formulario_mensaje').classList.remove('formulario_mensaje-activo');
+		}, 3000); //3 seg
 	}
 });
 

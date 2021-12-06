@@ -39,7 +39,7 @@
                                 <span class="col-md-1 col-md-offset-2 text-center"><i class="fas fa-user bigicon"></i></span>
                                 <div id="grupo_nombres" class="input-group p-2 col-md-12">
                                     <input type="text" name="nombres" placeholder="nombres" id="nombres" 
-                                    title="Letras entre 2 y 40 caracteres." class="form-control" require>
+                                    title="Letras entre 2 y 40 caracteres." class="form-control" require>                                    
                                     <i class="formulario_validacion-estado fas fa-times-circle"></i>
                                 </div>
                                 <p class="formulario_input-error">El/los Nombre/s tienen que ser de 2 a 40 letras.</p>
@@ -65,8 +65,7 @@
                             <div id="form-group-message" class="form-group">
                                 <span class="col-md-1 col-md-offset-2 text-center"><i class="fas fa-comment-alt bigicon"></i></span>
                                 <div id="grupo_message" class="input-group p-2 col-md-12">
-                                    <textarea class="form-control" id="message" name="message" placeholder="Escriba aquí su comentario." rows="5" style="resize: none;" require ></textarea>
-                                    <!-- <i class="formulario_validacion-estado fas fa-times-circle"></i> -->
+                                    <textarea class="form-control" id="message" name="message" placeholder="Escriba aquí su comentario." rows="5" style="resize: none;" ></textarea>
                                 </div>
                                 <p class="formulario_input-error">Ingrese un comentario.</p>
                             </div>    
@@ -76,8 +75,8 @@
                             </div>
                             <div class="form-group">
                                 <div class="col-md-12 text-center">
-                                    <button type="submit" class="btn btn-secondary btn-lg p-2 mt-2">Enviar</button>
-                                    <a href="index.html" type="button" class="btn btn-secondary btn-lg p-2 mt-2">Volver</a>
+                                    <button type="submit" class="button-popcorn" role="button">Enviar</button>
+                                    <button onclick="window.location.href='index.html';" class="button-popcorn" role="button">Volver</button>
                                     <p class="formulario_mensaje-exito" id="formulario_mensaje-exito">Formulario enviado exitosamente!</p>
                                 </div>
                             </div>
