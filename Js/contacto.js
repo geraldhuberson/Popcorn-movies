@@ -41,22 +41,7 @@ const validarFormulario = (e) => {
 			validarCampo(expresiones.telefono, e.target, input_name);
 		break;
         case "message": 
-			
-			// let comment = document.getElementById("message")[0].value;
-			// if(comment != ""){
-			// 	campos.message=true;
-			// }
-
-			// console.log(campos.message);
-			// if(document.getElementById('message').value !=''){
-			// 	campos.message=true;	
-			// }
-			
-			// console.log(e.target.value);
-			// if(e.target.value.length!=''){
-			// 	campos.message=true;	
-				
-			// }			
+					
         break;
 	}
 };
@@ -115,6 +100,14 @@ const validarPassword2 = () => {
 
 */
 
+function iconsRemove(iconos)
+{
+	document.querySelector(`#grupo_apellido i`).classList.remove(`${iconos}`); 
+	document.querySelector(`#grupo_nombres i`).classList.remove(`${iconos}`);
+	document.querySelector(`#grupo_email i`).classList.remove(`${iconos}`);
+	document.querySelector(`#grupo_telefono i`).classList.remove(`${iconos}`);
+}
+
 //valido textarea
 function validar()
 {
@@ -137,6 +130,7 @@ function FirstLetterWords(str)
     return partes.join(" ");
 }
 
+
 inputs.forEach((input) => {
 	input.addEventListener('keyup', validarFormulario); //evento al presionar tecla
 	input.addEventListener('blur', validarFormulario); //evento al perder el input el foco
@@ -146,15 +140,17 @@ formulario.addEventListener('submit', (e) => {
 	e.preventDefault();
 	if(campos.apellido && campos.nombres && campos.email && campos.telefono && validar()){
 		formulario.reset();
-
+		
 		document.getElementById('formulario_mensaje-exito').classList.add('formulario_mensaje-exito-activo');
 		setTimeout(() => {
 			document.getElementById('formulario_mensaje-exito').classList.remove('formulario_mensaje-exito-activo');
 		}, 5000); //5 seg
-
+		
 		document.querySelectorAll('.form-group-correcto').forEach((icono) => {
 			icono.classList.remove('form-group-correcto');
+			
 		});
+		iconsRemove('fa-check-circle');
 	} else {
 		document.getElementById('formulario_mensaje').classList.add('formulario_mensaje-activo');
 		setTimeout(() => {
