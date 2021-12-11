@@ -17,6 +17,9 @@ let subject = {
     unsusc: "Anular tu suscripción a Popcorn Movies",
 }
 
+let mensj = document.getElementById('msj');
+
+
 // Plantillas
 let consulta = `<!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:o="urn:schemas-microsoft-com:office:office">
@@ -520,15 +523,20 @@ let cuerpo_mail;
 let asuntoMail;
 switch (asunto) {  
     case "cons": 
-        asuntoMail=`${subject.cons}`;    		
-        cuerpo_mail= consulta;
+        asuntoMail=`${subject.cons}`;  
+        mensj.innerHTML=`Hola ${userActive.name}, 
+        gracias por contactar a Popcorn Movies!
+        <br/> <br>
+        Presiona el botón para reestablecer tu contraseña y recuperar el acceso a Popcorn Movies. <br /><br />`;
+        cuerpo_mail= mensj;
+        // cuerpo_mail= consulta;
     break;
     case "sus":
         asuntoMail=`${subject.sus}`;
         cuerpo_mail= suscribe;
     break;
     case "recover":
-        asuntoMail=`${subject.recover}`;
+        asuntoMail=`${subject.recover}`;        
         cuerpo_mail= recoveryPass;
     break;
     case "pur":
