@@ -621,7 +621,7 @@
 
 function buscarMovie(){
     filtro = document.getElementById('searcher').value;
-    const listafiltrada = films.filter(titulo => titulo.name.includes('mal'));
+    const listafiltrada = films.filter(titulo => titulo.name.includes(filtro));
     console.log(listafiltrada);
 }
  
