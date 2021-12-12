@@ -19,7 +19,7 @@
     <div id="nav-placeholder"></div>
 
     <!-- Formulario de registro -->
-    <form class="d-block g-3 form-general w-100">
+    <form class="d-block g-3 form-general w-100" id="formulario">
       <div class="form-de-registro">
         <!-- GRUPO DE NOMBRE -->
 
@@ -27,12 +27,13 @@
           <label for="validationServer01" class="form-label">Nombre/s</label>
           <input
             type="text"
-            class="form-control is-valid"
+            name="validationServer01"
+            class="form-control is-invalid"
             id="validationServer01"
-            value="Mark"
-            required
+            pattern="[A-Z a-z]{3,30}" 
+            title="Letras entre 3 y 30 caracteres."
           />
-          <div class="valid-feedback">Looks good!</div>
+          <div class="valid-feedback">Correcto!</div>
         </div>
 
         <!-- GRUPO DE APELLIDO -->
@@ -41,12 +42,14 @@
           <label for="validationServer02" class="form-label">Apellido</label>
           <input
             type="text"
-            class="form-control is-valid"
+            name="validationServer02"
+            class="form-control is-invalid"
             id="validationServer02"
-            value="Otto"
+            pattern="[A-Z a-z]{3,30}" 
+            title="Letras entre 3 y 30 caracteres."
             required
           />
-          <div class="valid-feedback">Looks good!</div>
+          <div class="valid-feedback">Correcto!</div>
         </div>
 
         <!-- GRUPO DE PAIS -->
@@ -300,14 +303,15 @@
           <div class="input-group has-validation">
             <span class="input-group-text" id="inputGroupPrepend3">@</span>
             <input
-              type="text"
+              type="email"
+              name="email"
               class="form-control is-invalid"
-              id="usuario"
-              aria-describedby="inputGroupPrepend3 usuarioFeedback"
+              id="email"
+              aria-describedby="inputGroupPrepend3 emailFeedback"
               required
             />
-            <div id="usuarioFeedback" class="invalid-feedback">
-              Please choose a username.
+            <div id="emailFeedback" class="valid-feedback">
+              Introducir este campo.
             </div>
           </div>
         </div>
@@ -318,9 +322,10 @@
           <label for="validationServer06" class="form-label">Contraseña</label>
           <input
             type="password"
+            name="validationServer06"
             class="form-control is-invalid"
             id="validationServer06"
-            aria-describedby="validationServer03Feedback"
+            aria-describedby="validationServer06Feedback"
             required
           />
           <div id="validationServer06Feedback" class="invalid-feedback"></div>
@@ -334,14 +339,16 @@
           >
           <input
             type="password"
+            name="validationServer07"
             class="form-control is-invalid"
             id="validationServer07"
             aria-describedby="validationServer07Feedback"
             required
           />
-          <div id="validationServer07Feedback" class="invalid-feedback"></div>
+          <div id="validationServer07Feedback" class="invalid-feedback">Las contraseñas deben coincidir.</div>
         </div>
-
+      
+        <!-- Aceptar condiciones -->
         <div class="col-12">
           <div class="form-check">
             <input
@@ -353,18 +360,26 @@
               required
             />
             <label class="form-check-label" for="invalidCheck3">
-              Agree to terms and conditions
+              Acepta los términos y condiciones.
             </label>
             <div id="invalidCheck3Feedback" class="invalid-feedback">
-              You must agree before submitting.
+              Debes estar de acuerdo antes de enviar.
             </div>
           </div>
         </div>
+
+        <!-- Boton enviar formulario -->
+
         <div class="col-12">
-          <button class="btn btn-success" type="submit">Submit form</button>
+          <button class="btn btn-success" type="submit">Enviar Formulario</button>
+          <div id="checkFormulario" class="valid-feedback">Formulario enviado exitosamente!</div>
         </div>
       </div>
     </form>
+    
+
+
+    <script src="/Js/registrarse.js"></script>
 
     <script src="//code.jquery.com/jquery.min.js"></script>
     <!--script de jquery -->
@@ -382,3 +397,4 @@
     ></script>
   </body>
 </html>
+
