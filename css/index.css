@@ -4,7 +4,7 @@
 body{
     background-position: center;
     background-repeat: no-repeat;
-    background-size: 330vh;
+    /* background-size: 330vh; */
     width: 100vw;
     height: 100vh;
     background-image:

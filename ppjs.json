@@ -10,8 +10,8 @@
             "categorie": "13+",
             "year": "2019",
             "image1": "assets/img/adosmetrosdeti1.jpg",
-            "image2": "assets/img/adosmetrosdeti21.png",
-            "video": 
+            "image2": "assets/img/adosmetrosdeti21.jpg",
+            "video": ""
         },
         {
             "id": "film2",
@@ -23,8 +23,8 @@
             "categorie": "16+",
             "year": "2012",
             "image1": "assets/img/imposible12.jpg",
-            "image2": "assets/img/impossible2.png",
-            "video": 
+            "image2": "assets/img/impossible2.jpg",
+            "video": ""
         },
         {
             "id": "film3",
@@ -36,8 +36,8 @@
             "categorie": "16+",
             "year": "2018",
             "image1": "assets/img/juegotraicion1.jpg",
-            "image2": "assets/img/juegotraicion21.png",
-            "video": 
-        },
+            "image2": "assets/img/juegotraicion21.jpg",
+            "video": ""
+        }
     ]
 }
