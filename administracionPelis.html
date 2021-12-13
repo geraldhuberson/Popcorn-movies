@@ -27,7 +27,7 @@
 
   
 <table id="bs-table" class="table table-striped table-dark table-hover"
-       data-show-columns="true">
+       data-show-columns="true" data-click-to-select="true">
 </table>
 
 </body>
@@ -53,7 +53,7 @@
       {
         field: "tableAction", title: "Action",
         formatter: (value, row, index, field) => {
-          curID = row[UNIQUE_ID]
+          curID = row[UNIQUE_ID]          
           return [
             `<button type="button" class="btn btn-default btn-sm" onclick="deleteItem(${curID})">`,
             `<i class="far fa-trash-alt"></i>`,
@@ -71,7 +71,7 @@
     table.bootstrapTable('refreshOptions',
       {
         columns: columns,
-        // url: "https://jsonplaceholder.typicode.com/photos",
+        //url: "https://jsonplaceholder.typicode.com/photos",
         data: films,   //////////////
         height: 768,
         uniqueId: "id",
@@ -90,7 +90,7 @@
   }
 
   function deleteItem(curID) {
-    if (!confirm('Are you sure you want to delete this item?')) {
+    if (!confirm('Are you sure you want to delete this item? '+curID)) {      
       return
     }
 
@@ -98,7 +98,7 @@
     table.bootstrapTable('remove', {
       field: UNIQUE_ID,
       values: ids,
-    })
+    })   
   }
 
   (

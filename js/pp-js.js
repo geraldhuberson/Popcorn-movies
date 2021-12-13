@@ -39,9 +39,10 @@ for(let i = 0; i < numeroPaginas; i++){
     indicador.addEventListener('click', (e) => {
         fila.scrollLeft = i * fila.offsetWidth;
 
-    document.querySelector('indicadores .active').classList.remove('active'){
-        e.target.classList.add('active');
+    document.querySelector('indicadores .active').classList.remove('active',
+        e.target.classList.add('active'));
     });
+
 }
 
 // Hover 

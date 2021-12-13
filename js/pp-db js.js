@@ -31,7 +31,7 @@
             destacada: "true",
         },
         // {
-        //     id: "f2",
+        //     id: "2",
         //     name: "Lo imposible",
         //     sinopsis: "Este drama atrapante narra el caos que vivió una familia debido al tsunami de 2004 en la costa del sudeste asiático",
         //     actors: "Naomi Watts, Ewan McGregor, Tom Holland, etc",
