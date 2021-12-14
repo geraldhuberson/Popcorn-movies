@@ -159,9 +159,9 @@ formulario.addEventListener("submit", (e) => {
     guardarUsuario();
     formulario.reset();
 
-    document.getElementById("checkFormulario").classList.add("valid hidden");
+    document.getElementById("checkFormulario").classList.add("on-hidden");
     setTimeout(() => {
-      document.getElementById("Formulario").classList.remove("");
+      document.getElementById("checkFormulario").classList.remove("");
     }, 5000);
 
     document.querySelectorAll(".valid-feedback").forEach((icono) => {
