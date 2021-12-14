@@ -171,19 +171,30 @@ let cuerpo_mail = `<!DOCTYPE html>
 //!junto con el subject y la plantilla
 function mail(){
 
-    Email.send({
-     Host : "smtp.elasticemail.com",
-     Username : "ad.popcorn.movies@gmail.com",
-     Password : "016C840DF53B1529A907F674124713FAD384",
-     To : "ad.popcorn.movies@gmail.com",
-     From : "ad.popcorn.movies@gmail.com",
-     Subject : asuntoMail,
-     Body : `${cuerpo_mail}, Su comentario: ${userActive.message}`
- }).then(
-   message => console.log(message)
-      );
-    }
+//     Email.send({
+//      Host : "smtp.elasticemail.com",
+//      Username : "ad.popcorn.movies2021@gmail.com",
+//      Password : "b34ee651-1970-4ab9-9bec-2b1dd27ca7a8",
+//      To : "ad.popcorn.movies2021@gmail.com",
+//      From : "ad.popcorn.movies2021@gmail.com",
+//      Subject : asuntoMail,
+//      Body : `${cuerpo_mail}, Su comentario: ${userActive.message}`
+//  }).then(
+//    message => console.log(message)
+//       );
+//     }
  
+    Email.send({
+        SecureToken : "b34ee651-1970-4ab9-9bec-2b1dd27ca7a8",
+        To : 'ad.popcorn.movies2021@gmail.com',
+        From : "ad.popcorn.movies2021@gmail.com",
+        Subject : asuntoMail,
+        Body : `${cuerpo_mail}, Su comentario: ${userActive.message}`
+    }).then(
+      message => console.log(message)
+    );
+    }
+
     mail(); 
 }
 
