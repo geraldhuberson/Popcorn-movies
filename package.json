@@ -1,0 +1,22 @@
+{
+  "name": "popcorn-movies",
+  "version": "1.0.0",
+  "description": "Popcorn movies",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JuanErnestoVillegas/Popcorn-movies.git"
+  },
+  "author": "JEV",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JuanErnestoVillegas/Popcorn-movies/issues"
+  },
+  "homepage": "https://github.com/JuanErnestoVillegas/Popcorn-movies#readme",
+  "dependencies": {
+    "json-server": "^0.17.0"
+  }
+}
