@@ -1,0 +1,31 @@
+body{
+    background-image: url(../assets/img/contacto-background.jpg); 
+    margin: 0;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.bigicon {
+    font-size: 28px;
+    color: #36A0FF;
+}
+
+form{
+    width: 60%;
+    margin: auto;
+    margin-top: 0;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 10px 20px;
+    box-sizing: border-box;
+    border-radius: 7;
+    -webkit-box-shadow: 5px 5px 15px 5px #000000; 
+    box-shadow: 5px 5px 15px 5px #000000;
+}
+
+main{
+    justify-content: center;
+    color: rgba(0, 0, 0, 0.8);
+    margin: 8px;
+
+}
