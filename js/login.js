@@ -18,7 +18,7 @@ class User {
 }
 
 let users = [
-	new User('Administrador','Popcorn Movies','ad.popcorn.movies@gmail','12345678', true),
+	new User('Administrador','Popcorn Movies','ad.popcorn.movies2021@gmail','12345678', true),
 	new User('juan','portillo','juanpablo.portillo2@gmail.com','12345678', false)
 	
 ]

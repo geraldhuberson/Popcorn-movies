@@ -82,7 +82,7 @@ body{
     transform: scale(1.1);
   }
 
-img:hover {
+  .column2 img:hover {
     box-shadow: 0px 0px 15px 15px rgba(0, 0, 0, 0.5);
     -webkit-box-shadow: 0px 0px 15px 15px rgba(0, 0, 0, 0.5);
     transition: all 0.8s;
