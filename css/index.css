@@ -5,30 +5,29 @@ body{
     background-position: center;
     background-repeat: no-repeat;
     /* background-size: 330vh; */
-    width: 100vw;
-    height: 100vh;
     background-image:
       radial-gradient(
         circle at bottom center,
         #1698F4,
-        #0941D8 30%
+        #2b72b1 30%
       );  
-}
-
-.carousel-caption {
-    margin-bottom: 15em;
 }
 .carousel-item {
     width: 100%;
+    height: 100vh;
     position: relative;
 }
+.carousel-caption {
+    margin-bottom: 15em;
+}
+
 
 .carousel-item::before{
     content: "";
     width: 100%;
     height: 100%;
     position: absolute;
-    background: linear-gradient(0deg, rgba(103,74,250,1) 0%, rgba(255,255,255,0) 12%, rgba(255,255,255,0) 69%, rgba(0,0,0,0.8) 100%);
+    background: linear-gradient(0deg, rgba(43,114,177,1) 0%, rgba(255,255,255,0) 12%, rgba(255,255,255,0) 69%, rgba(0,0,0,0.8) 100%);
 }
 
 .sinopsispp {
@@ -73,6 +72,7 @@ body{
 
 .peliculas-recomendadas {
     margin-bottom: 70px;
+    padding: 10px;
 }
 
 .peliculas-recomendadas .contenedor-principal {
@@ -112,31 +112,159 @@ body{
 
 /* Films */
 
-.peliculas-recomendadas .contenedor-carousel {
+.peliculas-recomendadas .card-container {
     width: 100%;
     padding: 20px 0;
     overflow: hidden;
     scroll-behavior: smooth;
 }
 
-.peliculas-recomendadas .contenedor-carousel .carouselpp2 {
+.peliculas-recomendadas .card-container .card {
     display: flex;
     flex-wrap: nowrap;
 }
 
-.peliculas-recomendadas .contenedor-carousel .carouselpp2 .films {
+.peliculas-recomendadas .card-container .card .card-films {
     min-width: 20%;
     transition: .3s ease all;
     box-shadow: 5px 5px 10px rgba(0,0,0, .3);
 }
 
-.peliculas-recomendadas .contenedor-carousel .carouselpp2 .films.hover {
+.peliculas-recomendadas .card-container .card .card-films.hover {
     transform: scale(1.2);
     transform-origin: center;
 }
 
-.peliculas-recomendadas .contenedor-carousel .carouselpp2 .films img {
+.peliculas-recomendadas .card-container .card .card-films img {
     width: 100%;
     vertical-align: top;
 }
-  
+
+
+
+/* Fer */
+
+.title{
+    color: #fff;
+    opacity: 0.9;
+    margin-left: 55px;
+    font-size: 25px;
+    font-weight: 500;
+}
+.movies-list{
+    width: 100%;
+    height: 220px;
+    margin-bottom: 5em;
+    position: relative;
+}
+.card-container{
+    position: absolute;
+    width: 92%;
+    height: 220px;
+    display: flex;
+    margin: 15px 50px 50px 50px;
+    align-items: center;
+    overflow-x: auto;
+    overflow-y: visible;
+    scroll-behavior: smooth;
+}
+.card-container::-webkit-scrollbar{
+    display: none;
+}
+.card{
+    position: relative;
+    min-width: 170px;
+    height: 200px;
+    border-radius: 3px;
+    overflow: hidden;
+    margin-right: 10px;
+    transition: .5s;
+}
+.card img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.card:hover{
+    transform: scale(1.1);
+}
+.card:hover .card-body{
+    opacity: 1;
+}
+
+.card-body{
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    z-index: 2;
+    background: linear-gradient(to bottom, rgba(4, 8, 15, 0), #192133 90%);
+    padding: 10px;
+    transition: 0.5ms;
+}
+.movie-tittle{
+    color: #fff;
+    font-size: 15px;
+    font-weight: 500;
+    text-transform: capitalize;
+    margin-top: 10px;
+    padding-left: 35px;
+    text-shadow: 4px 4px 6px rgb(0 0 0 / 80%);
+}
+.des{
+    color: #fff;
+    font-weight: 500;
+    font-size: 12px;
+    padding-left: 8px;
+    margin: 0;
+    text-shadow: 4px 4px 6px rgb(0 0 0 / 80%);    
+}
+.watchlist-btn{
+    position: relative;
+    width: 70%;
+    bottom: 5%;
+    border: none;
+    font-weight: 500;
+    text-align: center;
+    background-color: rgba(252, 252, 252, 0.1);
+    color: #fff;
+    margin-top: 45%;
+    margin-left: 15px;
+    cursor: pointer;
+    padding: 10px 5px;
+    border-radius: 3px;
+}
+
+.watchlist-btn:hover{
+    color: #fff;
+    background:rgb(253, 253, 253, 0.4);
+}
+
+.flecha-izq, .flecha-der {
+    position: absolute;
+    border: none;
+    background: rgba(0, 0, 0, 0.3);
+    font-size: 40px;
+    height: 50%;
+    top: calc(50% - 25%);
+    line-height: 40px;
+    width: 50px;
+    color: #fff;
+    cursor: pointer;
+    z-index: 500;
+    transition: .2s ease all;
+}
+
+.flecha-izq:hover, .flecha-der:hover {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.flecha-izq {
+    left: 0;
+}
+
+.flecha-der {
+    right: 0;
+}

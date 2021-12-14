@@ -31,7 +31,7 @@
             destacada: "true",
         },
         // {
-        //     id: "2",
+        //     id: "f2",
         //     name: "Lo imposible",
         //     sinopsis: "Este drama atrapante narra el caos que vivió una familia debido al tsunami de 2004 en la costa del sudeste asiático",
         //     actors: "Naomi Watts, Ewan McGregor, Tom Holland, etc",
@@ -615,15 +615,111 @@
             publicada: "",
             destacada: "",
         }
-        
-     
     ]
 
-function buscarMovie(){
-    filtro = document.getElementById('searcher').value;
-    const listafiltrada = films.filter(titulo => titulo.name.includes(filtro));
-    console.log(listafiltrada);
+
+    // Boton Búsqueda
+
+const searcher = document.querySelector('#searcher');
+const searchButton = document.querySelector('#search-button');
+const searchFilm = document.querySelector('#search-film')
+
+const filtrar = (event) => {
+    event.preventDefault();
+    searchFilm.innerHTML = '';
+
+    const pelis = searcher.value.toLowerCase();
+    let result = films.filter(film => film.name.toLowerCase().includes(pelis))
+    result.forEach(element => {
+        let resultado = document.createElement("li");
+        resultado.innerHTML = `
+        <a href="#">${element.name}</a>
+        `
+        searchFilm.appendChild(resultado);
+    });
+    searchFilm.removeAttribute("hidden");   
 }
+
+/*searchButton.addEventListener('keyup', filtrar)
+
+/*function buscarMovie(){
+   // filtro = document.getElementById('#searcher').value;
+    const listafiltrada = films.filter(titulo => titulo.name.includes('mal'));
+    console.log(listafiltrada);
+}*/
  
 
 
+//! Carrusel
+
+const dramaCarrousel = document.getElementById('drama-carrousel');
+const dramaFilms = films.filter(film => film.genre == 'Drama');
+
+dramaFilms.forEach(film =>{
+    let card = document.createElement('div');
+    card.innerHTML = `
+    <div class="card" id=${film.id}>
+        <img src=${film.image1} class="card-img" alt="#">
+        <div class="card-body">
+            <h2 class="movie-tittle">${film.name}</h2>
+            <h6 class="des">Lorem, ipsum dolor sit amet consectetur</h6>
+            <button class="watchlist-btn">Ver ahora</button>   
+        </div>
+    </div>
+    `
+    dramaCarrousel.appendChild(card);
+})
+
+const comediaCarrousel = document.getElementById('comedia-carrousel');
+const comediaFilms = films.filter(film => film.genre == 'Comedia');
+
+comediaFilms.forEach(film =>{
+    let card = document.createElement('div');
+    card.innerHTML = `
+    <div class="card" id=${film.id}>
+        <img src=${film.image1} class="card-img" alt="#">
+        <div class="card-body">
+            <h2 class="movie-tittle">${film.name}</h2>
+            <h6 class="des">Lorem, ipsum dolor sit amet consectetur</h6>
+            <button class="watchlist-btn">Ver ahora</button>   
+        </div>
+    </div>
+    `
+    comediaCarrousel.appendChild(card);
+})
+
+const accionCarrousel = document.getElementById('accion-carrousel');
+const accionFilms = films.filter(film => film.genre == 'Accion');
+
+dramaFilms.forEach(film =>{
+    let card = document.createElement('div');
+    card.innerHTML = `
+    <div class="card" id=${film.id}>
+        <img src=${film.image1} class="card-img" alt="#">
+        <div class="card-body">
+            <h2 class="movie-tittle">${film.name}</h2>
+            <h6 class="des">Lorem, ipsum dolor sit amet consectetur</h6>
+            <button class="watchlist-btn">Ver ahora</button>   
+        </div>
+    </div>
+    `
+    accionCarrousel.appendChild(card);
+})
+
+const terrorCarrousel = document.getElementById('terror-carrousel');
+const terrorFilms = films.filter(film => film.genre == 'Terror');
+
+terrorFilms.forEach(film =>{
+    let card = document.createElement('div');
+    card.innerHTML = `
+    <div class="card d-flex" id=${film.id}>
+        <img src=${film.image1} class="card-img" alt="#">
+        <div class="card-body">
+            <h2 class="movie-tittle">${film.name}</h2>
+            <h6 class="des">Lorem, ipsum dolor sit amet consectetur</h6>
+            <button class="watchlist-btn">Ver ahora</button>   
+        </div>
+    </div>
+    `
+    terrorCarrousel.appendChild(card);
+})
