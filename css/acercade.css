@@ -14,27 +14,9 @@ body{
       radial-gradient(
         circle at bottom center,
         #1698F4,
-        #0941D8 30%
+        #2b72b1 30%
       );  
 }
-
-/* NAVBAR */
-.navbar{
-    background-color: black;
-    opacity: 0.9;
-  }
-.collapse{
-    align-items: center;
-    margin-left: 25%;
-  }
-.navbar-toggler-icon{
-    background-color: white;
-    border-radius: 20%;
-  }
-.carousel-item{
-    height: 50vh;
-  }
-/* FIN DE NAVBAR */
 
 h3{
     font-size: 20px;
@@ -92,8 +74,8 @@ h2{
     border-radius: 50%;
     overflow: hidden;
     position: absolute;
-    box-shadow: 0px 0px 20px 0px black;
-    -webkit-box-shadow: 5px 5px 15px 5px #000000; 
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.5); 
     transition: all 300ms;    
 }
 

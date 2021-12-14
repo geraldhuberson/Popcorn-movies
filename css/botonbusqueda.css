@@ -1,18 +1,28 @@
-*{
-    margin: 0px;
-    padding: 0px;
-}
 
 .search{
-    position: absolute;
+    position: relative;
     padding: 5px;
 }
 
 .search input{
     width: 0px;
     height: 40px;
+    padding: 0;
+    font-size: 16px;
+    background: white;
+    border:none;
+    color: #000;
+    outline: none;
+    border-radius: 30px;
+    transition: all 0.6s ease;
+}
+
+.search input:hover{
+    width: 0px;
+    height: 40px;
     padding: 0 20px;
-    font-size: 18px;
+    font-size: 16px;
+    background: white;
     color: #000;
     outline: none;
     border: 1px solid silver;
@@ -20,29 +30,49 @@
     transition: all 0.6s ease;
 }
 
+
+
 .btn-search button{
     position: absolute;
     top: 0;
     right: 0;
-    background: rgb(14, 14, 141);
-    width: 55px;
-    height: 55px;
-    line-height: 55px;
+    background: rgba(0,0,0,0);
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
     text-align: center;
     color: white;
-    font-size: 20px;
+    font-size: 17px;
     border-radius: 50%;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-search button:hover{
+    position: absolute;
+    background: none;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    color: black;
+    font-size: 17px;
+    border-radius: 50%;
+    border: none;
     cursor: pointer;
 }
 
 .btn-search i{
-    line-height: 55px;
+    display: flex;
+    justify-content: center;
 }
 
 .search:hover input{
-   width: 240px;
+   width: 200px;
+   height: 35px;
 }
 
 .search input:focus{
-    width: 240px;
+    width: 200px;
+    height: 35px;
 }
