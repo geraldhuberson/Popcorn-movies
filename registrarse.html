@@ -353,9 +353,9 @@
             <span class="input-group-text" id="inputGroupPrepend3">@</span>
             <input
               type="email"
-              name="email"
+              name="usuario"
               class="form-control is-invalid"
-              id="email"
+              id="usuario"
               aria-describedby="inputGroupPrepend3 emailFeedback"
               required
             />
@@ -420,8 +420,8 @@
         <!-- Boton enviar formulario -->
 
         <div class="col-12">
-          <button class="btn btn-success" type="submit">Enviar Formulario</button>
-          <div id="checkFormulario" class="valid-feedback">Formulario enviado exitosamente!</div>
+          <button class="btn btn-success" type="submit" onsubmit="guardarUsuarios()">Enviar Formulario</button>
+          <div id="checkFormulario" class="valid-feedback" hidden>Formulario enviado exitosamente!</div> 
         </div>
       </div>
     </form>
