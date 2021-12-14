@@ -133,7 +133,7 @@
       {
         columns: columns,
         url: "http://localhost:3000/films",
-        //data: films,   //////////////
+        //data: films,   
         height: 768,
         uniqueId: "id",
         striped: true,
@@ -155,18 +155,20 @@
       return
     }
 
-    const ids = [curID]
-    console.log(ids);
-    table.bootstrapTable('remove', {
-      field: UNIQUE_ID,
-      values: ids,
-    })   
-  }
+    table.bootstrapTable('removeByUniqueId', curID)
 
+    // const ids = [curID]
+    // console.log(ids);
+    // table.bootstrapTable('remove', {
+    //   field: curID,
+    //   values: ids,
+    // })   
+  }
+  
   (
     () => {
       window.onload = () => {
-        createBSTable()
+        createBSTable()        
       }
     }
   )()
