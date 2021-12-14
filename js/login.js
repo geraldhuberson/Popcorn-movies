@@ -18,6 +18,7 @@ class User {
 }
 
 let users = [
+	new User('Administrador','Popcorn Movies','ad.popcorn.movies@gmail','12345678', true),
 	new User('juan','portillo','juanpablo.portillo2@gmail.com','12345678', false)
 	
 ]
@@ -26,11 +27,12 @@ let users = [
 
 function loginCheck(event) {
 	event.preventDefault();
+	
 	let email = document.querySelector('#email').value;
 	let pass = document.querySelector('#pass').value;
 	let userLogged = users.find(User=>User.email == email);
 	if(userLogged && userLogged.password == pass){
-		window.location.assign('http://www.google.com.ar');
+		window.location.assign('index.html');
 	}else {
 		let dataError = document.createElement('div');
 		dataError.innerText='Los datos ingresados no son correctos';

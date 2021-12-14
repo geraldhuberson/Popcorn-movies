@@ -7,9 +7,9 @@
 body{
     background-position: center;
     background-repeat: no-repeat;
-    background-size: 330vh;
+    background-size: 400vh;
     width: 100vw;
-    height: 100vh;
+    height: 130vh;
     background-image:
       radial-gradient(
         circle at bottom center,

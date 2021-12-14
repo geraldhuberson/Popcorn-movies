@@ -4,7 +4,7 @@
 }
 
 body {
-    background-image: url(../img/login_fondo.jpg);
+    background-image: url(../assets/img/login_fondo.jpg);
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;

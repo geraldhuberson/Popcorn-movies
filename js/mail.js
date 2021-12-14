@@ -1,5 +1,5 @@
   //* Capturar datos del usuario activo
-function enviarMail(event, asunto){
+function enviarMail(event, correo, asunto){       ///
 event.preventDefault();
 let userActive = {
     name: document.getElementById('nombres').value,
@@ -47,7 +47,7 @@ switch (asunto) {
         mensj=`<p id="msj" style="margin: 0 0 20px 0;font-family: Verdana, sans-serif;">Hola ${userActive.name}, 
         gracias por contactar a Popcorn Movies!
         <br/> <br>
-        Presiona el botón para reestablecer tu contraseña y recuperar el acceso a Popcorn Movies. <br /><br />
+        Presiona el botón para reenviar tu contraseña y recuperar el acceso a Popcorn Movies. <br /><br />
         </p>`; 
     break;
     case "pur":
