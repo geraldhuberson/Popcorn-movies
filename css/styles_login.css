@@ -1,0 +1,69 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url(../img/login_fondo.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+}
+
+.formulario {
+    background: rgba(0,0,0,.1);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.568);
+    color: white;
+    align-items: center;
+    
+}
+
+
+.ingresar {
+    padding: 10px;
+    font-size: 16px;
+    color: white;
+    font-weight: 700 !important;
+}
+
+
+.form-control {
+    background: rgba(0, 0, 0,);  
+}
+
+.box-container {
+margin-top: 10%;
+}
+
+
+.email-input {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+@media (max-width: 575px) {
+.formulario {
+    width: 90% !important;
+    
+}
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+    .formulario {
+        width: auto !important;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .formulario {
+        width: auto !important;
+    }
+}
+
+
+
+

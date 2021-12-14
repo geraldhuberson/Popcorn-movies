@@ -71,8 +71,8 @@
     table.bootstrapTable('refreshOptions',
       {
         columns: columns,
-        //url: "https://jsonplaceholder.typicode.com/photos",
-        data: films,   //////////////
+        url: "http://localhost:3000/films",
+        //data: films,   //////////////
         height: 768,
         uniqueId: "id",
         striped: true,
@@ -95,6 +95,7 @@
     }
 
     const ids = [curID]
+    console.log(ids);
     table.bootstrapTable('remove', {
       field: UNIQUE_ID,
       values: ids,
