@@ -18,6 +18,24 @@ body{
       );  
 }
 
+/* NAVBAR */
+.navbar{
+    background-color: black;
+    opacity: 0.9;
+  }
+.collapse{
+    align-items: center;
+    margin-left: 25%;
+  }
+.navbar-toggler-icon{
+    background-color: white;
+    border-radius: 20%;
+  }
+.carousel-item{
+    height: 50vh;
+  }
+/* FIN DE NAVBAR */
+
 h3{
     font-size: 20px;
     font-family: system-ui,-apple-system,system-ui,"Segoe UI",Roboto,Ubuntu,"Helvetica Neue",sans-serif;
