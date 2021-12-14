@@ -166,6 +166,7 @@ formulario.addEventListener("submit", (e) => {
 
     document.querySelectorAll(".valid-feedback").forEach((icono) => {
       icono.classList.remove("");
+      window.location.href="index.html";
     });
   } else {
     document.getElementById("checkFormulario").classList.add();
