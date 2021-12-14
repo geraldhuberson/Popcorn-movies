@@ -2,17 +2,17 @@
 
 let cardContainers = [...document.querySelectorAll('.card-container')];
 let preBtn = [...document.querySelectorAll('.flecha-izq')];
-let nxtBtns = [...document.querySelectorAll('.flecha-der')];
+let nxtBtn = [...document.querySelectorAll('.flecha-der')];
 
 cardContainers.forEach((item, i) => {
     let containerDimensions = item.getBoundingClientRect();
     let containerWidth = containerDimensions.width
 
-    nxtBtns[i].addEventListener('click', () => {
+    nxtBtn[i].addEventListener('click', () => {
       item.scrollLeft += containerWidth - 200;
     })
 
-    preBtns[i].addEventListener('click', () => {
+    preBtn[i].addEventListener('click', () => {
         item.scrollLeft -= containerWidth + 200;
       })
 })
@@ -25,12 +25,12 @@ function carousel(cardContainer){
   cardContainer.addEventListener('click', e => {
     let preBtn = cardContainer.querySelector('.flecha-izq');
     nxtBtn = cardContainer.querySelector('.flecha-der');
-    img = cardContainer.querySelector('img');
+    imgs = cardContainer.querySelector('img');
     tgt = e.target;
-
+s
     if(tgt == preBtn){
       if(cont > 0){
-        img.src = imgs[cont -1];
+        imgs.src = imgs[cont -1];
         cont--;
       }else{
         img.src = imgs[imgs.length - 1 ];
@@ -41,7 +41,7 @@ function carousel(cardContainer){
         img.src = imgs[cont + 1];
         cont++;
       }else{
-        img.src = imgs[ 0 ];
+        imgs.src = imgs[ 0 ];
         cont = 0;
     }
   }})

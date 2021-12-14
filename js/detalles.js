@@ -25,12 +25,12 @@ let peliculaDetalles = document.getElementById ('contenido');
 
 peliculaDetalles.innerHTML = `
     <div id="portadaPeli">
-        <img src="img/harrypotter.jpg" alt="portada de la pelicula" class="w-100" height="550px">
+        <img src="assets/img/harrypotter.jpg" alt="portada de la pelicula" class="w-100" height="550px">
     </div>
     <div class="container">
         <div class="encimaImagen">
             <div>
-                <img src="img/logo-hp.png" alt="logo de la pelicula" width="25%" class="my-3">
+                <img src="assets/img/logo-hp.png" alt="logo de la pelicula" width="25%" class="my-3">
             </div>
             <button type="button" class="btn btn-light me-4 my-4">
                 <i class="fas fa-play me-2"></i>

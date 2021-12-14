@@ -1,5 +1,5 @@
   //* Capturar datos del usuario activo
-function enviarMail(event, correo, asunto){       ///
+function enviarMail(event, asunto){       ///
 event.preventDefault();
 let userActive = {
     name: document.getElementById('nombres').value,
