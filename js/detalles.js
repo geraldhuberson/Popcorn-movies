@@ -22,6 +22,12 @@ let harryPotter = new Pelicula  (
 )
 
 let peliculaDetalles = document.getElementById ('contenido');
+/*
+<video controls autoplay>
+            <source src="assets/videos/1917_Trim.mp4" type="video/mp4">                
+            Your browser does not support the video tag.
+            </video> ';"
+*/
 
 peliculaDetalles.innerHTML = `
     <div id="portadaPeli">
@@ -32,8 +38,8 @@ peliculaDetalles.innerHTML = `
             <div>
                 <img src="assets/img/logo-hp.png" alt="logo de la pelicula" width="25%" class="my-3">
             </div>
-            <button type="button" class="btn btn-light me-4 my-4">
-                <i class="fas fa-play me-2"></i>
+            <button type="button" class="btn btn-light me-4 my-4" >
+                <i class="fas fa-play me-2"></i>                 
                 Reproducir
             </button>
             <button type="button" class="btn btn-dark rounded-circle me-3">
