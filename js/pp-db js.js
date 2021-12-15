@@ -633,7 +633,7 @@ const filtrar = (event) => {
     result.forEach(element => {
         let resultado = document.createElement("li");
         resultado.innerHTML = `
-        <a href="#">${element.name}</a>
+        <a href="/Detalle.html" id=${element.id}>${element.name}</a>
         `
         searchFilm.appendChild(resultado);
     });
@@ -663,7 +663,7 @@ dramaFilms.forEach(film =>{
         <div class="card-body">
             <h2 class="movie-tittle">${film.name}</h2>
             <h6 class="des">Lorem, ipsum dolor sit amet consectetur</h6>
-            <button class="watchlist-btn">Ver ahora</button>   
+            <a href="/Detalle.html" id=${film.id}><button class="watchlist-btn">${film.id}</button></a>   
         </div>
     </div>
     `
