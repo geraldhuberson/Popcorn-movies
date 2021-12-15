@@ -5,6 +5,19 @@ body {
   background-position: center;
   background-attachment: fixed;
 }
+
+body::before{
+  content: "";
+  width: 100%;
+  min-height: 100vh;
+  position: absolute;
+  top: 0%;
+  left: 0;
+  background: linear-gradient(90deg, rgb(43, 114, 177), #55a6b8 );
+  opacity: 0.7;
+  z-index: -1;
+}
+
 .navbar{
   background-color: black;
   opacity: 0.9;
