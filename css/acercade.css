@@ -10,12 +10,7 @@ body{
     background-size: 400vh;
     width: 100vw;
     height: 130vh;
-    background-image:
-      radial-gradient(
-        circle at bottom center,
-        #1698F4,
-        #2b72b1 30%
-      );  
+    background: linear-gradient(90deg, rgb(43, 114, 177), #55a6b8 );
 }
 
 h3{

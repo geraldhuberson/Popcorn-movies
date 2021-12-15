@@ -622,7 +622,9 @@
 
 const searcher = document.querySelector('#searcher');
 const searchButton = document.querySelector('#search-button');
-const searchFilm = document.querySelector('#search-film')
+const searchFilm = document.querySelector('#search-film');
+
+
 
 const filtrar = (event) => {
     event.preventDefault();
@@ -632,12 +634,16 @@ const filtrar = (event) => {
     let result = films.filter(film => film.name.toLowerCase().includes(pelis))
     result.forEach(element => {
         let resultado = document.createElement("li");
+        resultado.classList.add("li-box");
         resultado.innerHTML = `
-        <a href="#">${element.name}</a>
+        <a href="#" class="a-li text-decoration-none link-dark">${element.name}</a>
+        <hr style="margin:1px 0px 1px 0px">
         `
         searchFilm.appendChild(resultado);
     });
-    searchFilm.removeAttribute("hidden");   
+    searchFilm.removeAttribute("hidden");
+    
+
 }
 
 /*searchButton.addEventListener('keyup', filtrar)
@@ -662,7 +668,6 @@ dramaFilms.forEach(film =>{
         <img src=${film.image1} class="card-img" alt="#">
         <div class="card-body">
             <h2 class="movie-tittle">${film.name}</h2>
-            <h6 class="des">Lorem, ipsum dolor sit amet consectetur</h6>
             <button class="watchlist-btn">Ver ahora</button>   
         </div>
     </div>
@@ -680,7 +685,6 @@ comediaFilms.forEach(film =>{
         <img src=${film.image1} class="card-img" alt="#">
         <div class="card-body">
             <h2 class="movie-tittle">${film.name}</h2>
-            <h6 class="des">Lorem, ipsum dolor sit amet consectetur</h6>
             <button class="watchlist-btn">Ver ahora</button>   
         </div>
     </div>
@@ -698,7 +702,6 @@ dramaFilms.forEach(film =>{
         <img src=${film.image1} class="card-img" alt="#">
         <div class="card-body">
             <h2 class="movie-tittle">${film.name}</h2>
-            <h6 class="des">Lorem, ipsum dolor sit amet consectetur</h6>
             <button class="watchlist-btn">Ver ahora</button>   
         </div>
     </div>
@@ -715,8 +718,8 @@ terrorFilms.forEach(film =>{
     <div class="card d-flex" id=${film.id}>
         <img src=${film.image1} class="card-img" alt="#">
         <div class="card-body">
-            <h2 class="movie-tittle">${film.name}</h2>
-            <h6 class="des">Lorem, ipsum dolor sit amet consectetur</h6>
+            <h2 class="movie-tittle" style="text-shadow: 4px 4px 6px rgb(0 0 0 / 80%);">${film.name}</h2>
+            <!--<h6 class="des">Lorem, ipsum dolor sit amet consectetur</h6>-->
             <button class="watchlist-btn">Ver ahora</button>   
         </div>
     </div>

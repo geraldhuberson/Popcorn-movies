@@ -1,5 +1,5 @@
 .navbar{
-  background: linear-gradient(180deg, rgba(0,0,0,1) 40%, rgba(255,255,255,0) 100%);
+  background: linear-gradient(180deg, rgba(0,0,0,1) 31%, rgba(0,0,0,0.6561975131849616) 66%, rgba(43,114,177,0) 100%);
   text-shadow: 4px 4px 6px rgb(0 0 0 / 80%);
 }
 .collapse{

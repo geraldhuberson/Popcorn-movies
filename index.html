@@ -71,7 +71,7 @@
           </ul>
           
           <!--Botón Búsqueda-->
-          <form class="d-flex search" onsubmit="filtrar(event)">
+          <form id="form-search" class="d-flex flex-column search" onsubmit="filtrar(event)">
             <input
                 id="searcher"
                 class="form-control me-2"
@@ -80,7 +80,7 @@
                 aria-label="Search"
               />
              <div class="btn-search">
-              <button id="search-button" class="btn btn-outline-success" type="submit"><i class="fas fa-search"></i></button>
+              <button id="search-button" class="btn" type="submit"><i class="fas fa-search"></i></button>
               <ul id="search-film" hidden></ul>
             
             </div>
@@ -206,47 +206,38 @@
   <!--Carrusel fer-->
   <h1 class="title">Drama</h1>
   <div class="movies-list">
-    <div class="card-container">
-              
-      <div id="drama-carrousel" class="d-flex flex-row">
-        <button role="button" class="flecha-izq"><i class="fas fa-angle-left"></i></button>
-        <button role="button" class="flecha-der"><i class="fas fa-angle-right"></i></i></button>
-      </div>  
-      
+    <button role="button" class="flecha-izq"><i class="fas fa-angle-left"></i></button>
+    <div class="card-container">        
+      <div id="drama-carrousel" class="d-flex flex-row"> </div>   
     </div>
+    <button role="button" class="flecha-der"><i class="fas fa-angle-right"></i></i></button>
   </div>
 
 <h1 class="title">Comedia</h1>
   <div class="movies-list">
-    <div class="card-container">
-      <button role="button" class="flecha-izq"><i class="fas fa-angle-left"></i></button>         
-      <div id="comedia-carrousel" class="d-flex flex-row">
-
-      </div>  
-      <button role="button" class="flecha-der"><i class="fas fa-angle-right"></i></i></button>
+    <button role="button" class="flecha-izq"><i class="fas fa-angle-left"></i></button>
+    <div class="card-container">               
+      <div id="comedia-carrousel" class="d-flex flex-row"> </div>       
     </div>
+    <button role="button" class="flecha-der"><i class="fas fa-angle-right"></i></i></button>
 </div>
 
 <h1 class="title">Acción</h1>
   <div class="movies-list">
-    <div class="card-container">
-      <button role="button" class="flecha-izq fixed-bottom"><i class="fas fa-angle-left"></i></button>         
-      <div id="accion-carrousel" class="d-flex flex-row">
-
-      </div>  
-      <button role="button" class="flecha-der fixed-bottom"><i class="fas fa-angle-right"></i></i></button>
+    <button role="button" class="flecha-izq"><i class="fas fa-angle-left"></i></button>
+    <div class="card-container">               
+      <div id="accion-carrousel" class="d-flex flex-row"> </div>     
     </div>
+    <button role="button" class="flecha-der"><i class="fas fa-angle-right"></i></i></button>
 </div>
 
 <h1 class="title">Terror</h1>
   <div class="movies-list">
-    <div class="card-container">
-      <button role="button" class="flecha-izq"><i class="fas fa-angle-left"></i></button>         
-      <div id="terror-carrousel" class="d-flex flex-row">
-
-      </div>  
-      <button role="button" class="flecha-der"><i class="fas fa-angle-right"></i></i></button>
+    <button role="button" class="flecha-izq"><i class="fas fa-angle-left"></i></button>  
+    <div class="card-container">            
+      <div id="terror-carrousel" class="d-flex flex-row"> </div>       
     </div>
+    <button role="button" class="flecha-der"><i class="fas fa-angle-right"></i></i></button>
 </div>
 
 

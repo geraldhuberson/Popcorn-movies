@@ -5,13 +5,9 @@ body{
     background-position: center;
     background-repeat: no-repeat;
     /* background-size: 330vh; */
-    background-image:
-      radial-gradient(
-        circle at bottom center,
-        #1698F4,
-        #2b72b1 30%
-      );  
+    background: linear-gradient(0deg, rgba(85,166,184,1) 0%, rgba(43,114,177,1) 65%);
 }
+
 .carousel-item {
     width: 100%;
     height: 100vh;
@@ -27,7 +23,7 @@ body{
     width: 100%;
     height: 100%;
     position: absolute;
-    background: linear-gradient(0deg, rgba(43,114,177,1) 0%, rgba(255,255,255,0) 12%, rgba(255,255,255,0) 69%, rgba(0,0,0,0.8) 100%);
+    background: linear-gradient(180deg, rgba(85,166,184,0) 75%, rgba(43,114,177,1) 100%);
 }
 
 .sinopsispp {
@@ -147,11 +143,14 @@ body{
 .title{
     color: #fff;
     opacity: 0.9;
-    margin-left: 55px;
-    font-size: 25px;
+    margin-top: 2em;
+    margin-left: 2.5em;
+    font-size: 1.5em;
     font-weight: 500;
 }
 .movies-list{
+    display: flex;
+    justify-content: center;
     width: 100%;
     height: 220px;
     margin-bottom: 5em;
@@ -176,18 +175,20 @@ body{
     min-width: 170px;
     height: 200px;
     border-radius: 3px;
+    border: none;
     overflow: hidden;
     margin-right: 10px;
-    transition: .5s;
+    transition: .5s;    
 }
 .card img{
     width: 100%;
-    height: 100%;
+    height: 200px;
     object-fit: cover;
 }
 .card:hover{
     transform: scale(1.1);
 }
+
 .card:hover .card-body{
     opacity: 1;
 }
@@ -200,18 +201,20 @@ body{
     top: 0%;
     left: 0%;
     z-index: 2;
-    background: linear-gradient(to bottom, rgba(4, 8, 15, 0), #192133 90%);
-    padding: 10px;
+    background: rgba(61, 61, 61, 0.712);
     transition: 0.5ms;
 }
+
 .movie-tittle{
     color: #fff;
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 500;
     text-transform: capitalize;
-    margin-top: 10px;
-    padding-left: 35px;
-    text-shadow: 4px 4px 6px rgb(0 0 0 / 80%);
+    /*display: flex;
+    justify-content: center;*/
+    text-align: center;
+    padding: 1em;
+    text-shadow: 4px 4px 6px rgb(0 0 0 / 90%);
 }
 .des{
     color: #fff;
@@ -222,17 +225,17 @@ body{
     text-shadow: 4px 4px 6px rgb(0 0 0 / 80%);    
 }
 .watchlist-btn{
-    position: relative;
+    position: absolute;
     width: 70%;
     bottom: 5%;
     border: none;
-    font-weight: 500;
+    font-weight: 500;  
     text-align: center;
-    background-color: rgba(252, 252, 252, 0.1);
-    color: #fff;
-    margin-top: 45%;
-    margin-left: 15px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
     cursor: pointer;
+    margin: 1em 1em 1em 0.6em;
+    
     padding: 10px 5px;
     border-radius: 3px;
 }
@@ -244,27 +247,33 @@ body{
 
 .flecha-izq, .flecha-der {
     position: absolute;
+    background: transparent;
+    margin-top: 0.4em;
     border: none;
-    background: rgba(0, 0, 0, 0.3);
     font-size: 40px;
     height: 50%;
     top: calc(50% - 25%);
-    line-height: 40px;
+    line-height: auto;
     width: 50px;
-    color: #fff;
+    color: rgb(255, 255, 255);
     cursor: pointer;
     z-index: 500;
     transition: .2s ease all;
+    text-shadow: 4px 4px 6px rgb(0 0 0 / 100%);
 }
 
-.flecha-izq:hover, .flecha-der:hover {
+/*.flecha-izq:hover, .flecha-der:hover {
     background: rgba(0, 0, 0, 0.5);
-}
+}*/
+    
+
 
 .flecha-izq {
     left: 0;
+    margin-left: 1.5em;
 }
 
 .flecha-der {
     right: 0;
+    margin-right: 1.5em;
 }
