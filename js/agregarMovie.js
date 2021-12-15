@@ -1,12 +1,12 @@
 function saveMovie(){
-    const name=document.getElementById('movieName').value;
-    const director=document.getElementById('movieDirector').value;
-    const genre=document.getElementById('movieGenre').value;
-    const category=document.getElementById('movieCategory').value;
-    const age=document.getElementById('movieAge').value;
-    const destacada=document.getElementById('isFeatured').checked;
-    const publicada=document.getElementById('isPublished').checked;
-    let movies= JSON.parse(localStorage.getItem('movies'))
+    const name=document.getElementById('movieName1').value;
+    const director=document.getElementById('movieDirector1').value;
+    const genre=document.getElementById('movieGenre1').value;
+    const category=document.getElementById('movieCategory1').value;
+    const age=document.getElementById('movieAge1').value;
+    const destacada=document.getElementById('isFeatured1').checked;
+    const publicada=document.getElementById('isPublished1').checked;
+    let movies= JSON.parse(localStorage.getItem('movies1'))
     if (movies==null){
         movies=[]
     }

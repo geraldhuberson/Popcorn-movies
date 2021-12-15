@@ -5,59 +5,64 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <link rel="stylesheet" href="css/agregarmovie.css">
+  
 </head>
 <body>
   
 
-<div id="ingre_peli"><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addMovieModal" data-bs-whatever="@mdo">Crear Pelicula</button>
-  
-  <div class="modal fade" id="addMovieModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Ingresar Pelicula</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <form id="add-movie-form">
-            <div class="mb-3">
-              <label for="movieName" class="col-form-label">Nombre:</label>
-              <input type="text" class="form-control" id="movieName">
-            </div>
-            <div class="mb-3">
-              <label for="movieDirector" class="col-form-label">Director:</label>
-              <input type="text" class="form-control" id="movieDirector">
-            </div>
-            <div class="mb-3">
-              <label for="movieGenre" class="col-form-label">Genero:</label>
-              <input type="text" class="form-control" id="movieGenre">
-            </div>
-            <div class="mb-3">
-              <label for="movieCategory" class="col-form-label">Categoria:</label>
-              <input type="text" class="form-control" id="movieCategory">
-            </div>
-            <div class="mb-3">
-              <label for="movieAge" class="col-form-label">Año:</label>
-              <input type="date" class="form-control" id="movieAge">
-            </div>
-            <div class="form-check form-switch">
-              <input class="form-check-input" type="checkbox" id="isFeatured">
-              <label class="form-check-label" for="isFeatured">Destacada</label>
-            </div>
-            <div class="form-check form-switch">
-              <input class="form-check-input" type="checkbox" id="isPublished">
-              <label class="form-check-label" for="isPublished">Publicada</label>
-            </div>
-          </form>
-        </div>
-        <div class="modal-footer">          
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-          <button type="button" class="btn btn-primary" onclick="saveMovie()">Guardar</button>
+ <div id="ingre_peli"><button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#addMovieModal" data-bs-whatever="@mdo">Crear Pelicula</button>
+     <div class="modal fade" id="addMovieModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="fondo-modal">
+          <div class="modal-header">
+            <div class="titulo-modal"><h5 class="modal-title" id="exampleModalLabel">Ingresa Los Datos</h5></div>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form id="add-movie-form">
+              <div class="mb-3">
+                <label for="movieName" class="col-form-label">Nombre:</label>
+                <input type="text" class="form-control" id="movieName1">
+              </div>
+              <div class="mb-3">
+                <label for="movieDirector" class="col-form-label">Director:</label>
+                <input type="text" class="form-control" id="movieDirector1">
+              </div>
+              <div class="mb-3">
+                <label for="movieGenre" class="col-form-label">Genero:</label>
+                <input type="text" class="form-control" id="movieGenre1">
+              </div>
+              <div class="mb-3">
+                <label for="movieCategory" class="col-form-label">Categoria:</label>
+                <input type="text" class="form-control" id="movieCategory1">
+              </div>
+              <div class="mb-3">
+                <label for="movieAge" class="col-form-label">Año:</label>
+                <input type="date" class="form-control" id="movieAge1">
+              </div></div>
+              <div class="form-check form-switch">
+               <div class="check-destacada"> <input class="form-check-input" type="checkbox" id="isFeatured1">
+                <label class="form-check-label" for="isFeatured">Destacada</label></div>
+              </div>
+              <div class="form-check form-switch">
+                <div class="check-publicada"> <input class="form-check-input" type="checkbox" id="isPublished1">
+                <label class="form-check-label" for="isPublished">Publicada</label></div>
+              </div>
+            </form> 
+          
+          <div class="modal-footer">
+            
+            <div class="boton-cerrar"><button type="button" class="btn btn" data-bs-dismiss="modal">Cerrar</button></div>
+              <div class="boton-guardar"><button type="button" class="btn btn"  onclick="saveMovie()">Guardar</button></div>
+          </div></div>
         </div>
       </div>
-    </div>
-  </div></div>
-  <script src="agregarMovie.js"></script>
-</body>
+    </div></div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="js/agregarMovie.js"></script>
+  </body>
 </html>
