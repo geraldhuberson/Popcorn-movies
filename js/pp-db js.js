@@ -636,8 +636,12 @@ const filtrar = (event) => {
         let resultado = document.createElement("li");
         resultado.classList.add("li-box");
         resultado.innerHTML = `
+<<<<<<< HEAD
         <a href="#" class="a-li text-decoration-none link-dark">${element.name}</a>
         <hr style="margin:1px 0px 1px 0px">
+=======
+        <a href="/Detalle.html" id=${element.id}>${element.name}</a>
+>>>>>>> 20fcd07a871dead053dee43fb82b9d28cd6eaf9f
         `
         searchFilm.appendChild(resultado);
     });
@@ -668,7 +672,12 @@ dramaFilms.forEach(film =>{
         <img src=${film.image1} class="card-img" alt="#">
         <div class="card-body">
             <h2 class="movie-tittle">${film.name}</h2>
+<<<<<<< HEAD
             <button class="watchlist-btn">Ver ahora</button>   
+=======
+            <h6 class="des">Lorem, ipsum dolor sit amet consectetur</h6>
+            <a href="/Detalle.html" id=${film.id}><button class="watchlist-btn">${film.id}</button></a>   
+>>>>>>> 20fcd07a871dead053dee43fb82b9d28cd6eaf9f
         </div>
     </div>
     `
