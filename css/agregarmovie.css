@@ -29,3 +29,23 @@ main{
     margin: 8px;
 
 }
+.fondo-modal{background-image: url(../assets/img/gafas-3d.jpg);
+    margin: 0;
+    background-position: center;
+    background-size: cover;
+    color: #98A7B2;
+border-radius: 5px;
+}
+.titulo-modal{color: white;}
+.boton-cerrar{background-color: #9398c9;
+    border-radius: 5px;}
+.boton-guardar{background-color: #9398c9;
+        border-radius: 5px;}
+        .check-destacada{color: black;}
+        .check-publicada{color: black;}
+    .boton_ingre_peli{background-color: #806104;}
+     #isFeatured1{background-color: #9398c9;
+        border-color: #E1B890; }
+    #isPublished1{background-color: #9398c9;
+        border-color:#E1B890;
+}

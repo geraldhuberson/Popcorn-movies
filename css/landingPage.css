@@ -5,6 +5,23 @@ body {
   background-position: center;
   background-attachment: fixed;
 }
+body::before{
+  content: "";
+  width: 100%;
+  min-height: 100vh;
+  position: absolute;
+  top: 0%;
+  left: 0;
+  background: linear-gradient(90deg, rgb(43, 114, 177), #55a6b8 );
+  opacity: 0.6;
+  z-index: -1;
+}
+
+nav img {
+  
+  width: 3em;
+  height: 3em;
+}
 .contenedor {
   max-width: 1100px;
   margin: 0 auto;
@@ -12,14 +29,12 @@ body {
 }
 .containerHeader {
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+.containerMain {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 10px;
-}
-.containerMain {
-  display: grid;
   grid-template-columns: repeat(2, 1fr);
   width: 100%;
   gap: 8rem;
@@ -27,22 +42,25 @@ body {
 }
 .containerMain .item {
   color: white;
+  text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.671);
 }
+
+
 .item h1 {
   line-height: 4rem;
   font-size: 50px;
   /* text-transform: capitalize; */
 }
-.item p{
-  font-size: 20px;
-}
+
 .item button {
   background: transparent;
   border-radius: 10px;
   color: white;
 }
-img {
-  max-width: 100%;
+.containerHeader img {
+  max-width: 80%;
+  padding-bottom: 1em;
+  
 }
 .boton-suscribirse {
   text-decoration: none;
