@@ -14,7 +14,7 @@ body::before{
   top: 0%;
   left: 0;
   background: linear-gradient(90deg, rgb(43, 114, 177), #55a6b8 );
-  opacity: 0.7;
+  opacity: 0.5;
   z-index: -1;
 }
 

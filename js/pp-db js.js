@@ -625,6 +625,15 @@ const searchButton = document.querySelector('#search-button');
 const searchFilm = document.querySelector('#search-film');
 
 
+/*searcher.addEventListener('blur', () => {
+    //searchFilm.removeChild(searchFilm.childNodes());
+    const searchFilm = document.querySelector('#search-film');
+    console.log(searchFilm.firstChild);
+        while (searchFilm.firstChild){
+            searchFilm.removeChild(searchFilm.firstChild);
+            console.log('hola')
+       }
+})*/
 
 const filtrar = (event) => {
     event.preventDefault();
@@ -632,6 +641,7 @@ const filtrar = (event) => {
 
     const pelis = searcher.value.toLowerCase();
     let result = films.filter(film => film.name.toLowerCase().includes(pelis))
+    
     result.forEach(element => {
         let resultado = document.createElement("li");
         resultado.classList.add("li-box");
@@ -640,12 +650,20 @@ const filtrar = (event) => {
         <hr style="margin:1px 0px 1px 0px">
         <a href="/Detalle.html" id=${element.id}>${element.name}</a>
         `
+        /*<a href="/Detalle.html" id=${element.id}>${element.name}</a>*/
         searchFilm.appendChild(resultado);
     });
     searchFilm.removeAttribute("hidden");
-    
-
 }
+
+/*searcher.addEventListener('blur', () => {
+    searchFilm.removeChild(resultado));
+       /* while (searchFilm.firstChild){
+            searchFilm.removeChild(searchFilm.firstChild);
+            console.log('hola')
+       }
+
+})*/
 
 /*searchButton.addEventListener('keyup', filtrar)
 
